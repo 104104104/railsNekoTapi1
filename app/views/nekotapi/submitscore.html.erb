@@ -1,0 +1,11 @@
+<h1>submitscore</h1>
+score=
+<%= @score %>
+<%= link_to 'title', nekotapi_title_path %>
+
+
+
+<!--%@ranking.attributes = {name: "谷川", score: @score, memo:'メモ'}%-->
+<!--%@ranking.save%-->
+
+<%= render 'form2', nekotapi: @ranking , score: @score%>
