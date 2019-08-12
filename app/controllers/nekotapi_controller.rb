@@ -3,11 +3,19 @@ class NekotapiController < ApplicationController
     end
 
     def title
+        @count = Gamecount.find(1)
     end
 
     def ranking
         @ranking = Ranking.all.order(score: :desc)
         @ranking2 = Ranking2.all.order(score: :desc)
+    end
+
+    def gamecount
+            @count = Gamecount.find(1)
+            @count.count+=1
+            @count.save
+            redirect_to '/nekotapi/game'
     end
 
     def game

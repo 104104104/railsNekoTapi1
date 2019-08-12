@@ -1,0 +1,2 @@
+class Gamecount < ApplicationRecord
+end
