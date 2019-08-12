@@ -2,6 +2,8 @@
 
 <h1>Ranking</h1>
 
+<%= link_to 'Title', nekotapi_title_path %>
+
 <table>
   <thead>
     <tr>
@@ -28,6 +30,30 @@
 </table>
 
 <br>
+==================================
+<table>
+  <thead>
+    <tr>
+      <th>Ranking</th>
+      <th>Name</th>
+      <th>Score</th>
+      <th>Memo</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <% count = 1 %>
+    <% @ranking2.each do |nekotapi| %>
+      <tr>
+        <td><%= count %></td>
+        <td><%= nekotapi.name %></td>
+        <td><%= nekotapi.score %></td>
+        <td><%= nekotapi.memo %></td>
+        <% count+=1 %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to 'Title', nekotapi_title_path %>
+<br>
